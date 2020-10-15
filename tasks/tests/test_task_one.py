@@ -1,19 +1,17 @@
-"""Test the xml file is parsed correctly."""
+"""Task One Test: Test the xml file is parsed correctly."""
 import unittest
 
 from ..task_one.parse_xml import parse_tokens
 
 
-class TestTokens(unittest.TestCase):
+class TestTaskOne(unittest.TestCase):
     """Test that the tokens are parsed correctly."""
 
-    def test_parse_tokens(self):
-        """Test method for parse_tokens"""
-        self.maxDiff = None
-        """Test parsed XML file example.xml."""
+    def setUp(self) -> None:
+        """Set up the test."""
         # Set the expected output to a list of metabolites.
-        # Each dict represents a metabolite.
-        expected_output: list = [
+        self.maxDiff = None
+        self.expected_output = [
             {
                 'name': 'D-GLUCOSE',
                 'creation_date': '2005-11-16 15:48:42 UTC',
@@ -41,8 +39,11 @@ class TestTokens(unittest.TestCase):
                 ]
             }
         ]
+
+    def test_parse_tokens(self):
+        """Test parsed XML file example.xml. Each dict represents a metabolite."""
         actual_output = parse_tokens('tasks/tests/example.xml')
-        self.assertListEqual(expected_output, actual_output)
+        self.assertListEqual(self.expected_output, actual_output)
 
 
 if __name__ == '__main__':

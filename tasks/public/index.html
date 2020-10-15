@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend</title>
+  <!-- Bootstrap and Font Awesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://use.fontawesome.com/9582024ed4.js"></script>
+</head>
+<body>
+  <form action="/submitPatientData" method="post">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Unit</th>
+          <th>Indicator</th>
+          <th>
+            <button class="btn btn-primary" type="button" onclick="appendMetabolite()">
+              <i class="fa fa-plus"></i>
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody name="parameterTable">
+        <tr name="metaboliteEntry" id="0">
+          <td><input type="text" class="form-control" name="metaboliteName"></td>
+          <td><input type="number" class="form-control" name="metaboliteValue"></td>
+          <td><input type="text" class="form-control" name="metaboliteUnit"></td>
+          <td><select name="metaboliteIndicator" class="form-control">
+            <option value="na">n/a</option>
+            <option value="?">?</option>
+            <option value="-1">-1</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+          </select></td>
+          <td>
+            <button class="btn btn-primary" type="button" id="0" onclick="removeMetabolite(this.id)" style="background: rgb(223,78,78);">
+              <i class="fa fa-minus"></i>
+            </button>
+          </td>
+        </tr>
+        <tr name="metaboliteEntry" id="0">
+          <td><input type="text" class="form-control" name="metaboliteName"></td>
+          <td><input type="number" class="form-control" name="metaboliteValue"></td>
+          <td><input type="text" class="form-control" name="metaboliteUnit"></td>
+          <td><select name="metaboliteIndicator" class="form-control">
+            <option value="na">n/a</option>
+            <option value="?">?</option>
+            <option value="-1">-1</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+          </select></td>
+          <td>
+            <button class="btn btn-primary" type="button" id="0" onclick="removeMetabolite(this.id)" style="background: rgb(223,78,78);">
+              <i class="fa fa-minus"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="submit" style="margin-left: 5%;">Submit Metabolites</button>
+  </form>
+</body>
+</html>
