@@ -1,8 +1,11 @@
 # Trial Tasks for PIT-M3D
 This repo contains a couple of practice exercises for PITM3D.
 
+Unit tests for the tasks are in `tasks/tests`.
+
+Task 2 is inside of `tasks/app.py` and has a unit test for the `/submitPatientData` route. You can run it and it will serve the HTML from the task(`tasks/public/index.html`) to the root path.
 ## Task 1
-Parse an [XML file](trial_tasks/tasks/tests/example.xml) and produce tokens.
+> Parse an XML file and produce tokens.
 ```xml
 <?xml version="1.0"?>
 <metabolites>
@@ -44,7 +47,11 @@ Parse an [XML file](trial_tasks/tasks/tests/example.xml) and produce tokens.
   </metabolite>
 </metabolites>
 ```
-Note: I have modified this XML file slightly from the one printed since there were some missing opening/closing tags.
+Solution:
+- See `tasks/task_one/parse_xml.py`
+- Note: I have modified this XML file slightly from the one printed since there were some missing opening/closing tags.
 
 ## Task 2
-Develop a backend for the given frontend.
+> Develop a backend for the given frontend.
+
+See `tasks/public/index.html` for HTML, and `tasks/app.py` for backend.

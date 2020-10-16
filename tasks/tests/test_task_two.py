@@ -29,4 +29,3 @@ class TestTaskTwo(unittest.TestCase):
             data=ImmutableMultiDict(self.mock_data)
         )
         self.assertEqual(response.status_code, 200)
-        # TODO: Test that it is entered into the database.

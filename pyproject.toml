@@ -10,6 +10,8 @@ defusedxml = "^0.6.0"
 unittest = "^0.0"
 Flask = "^1.1.2"
 DateTime = "^4.3"
+Flask-SQLAlchemy = "^2.4.4"
+Flask-Migrate = "^2.5.3"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"

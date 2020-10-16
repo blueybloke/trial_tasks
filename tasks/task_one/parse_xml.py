@@ -1,5 +1,5 @@
 """Task One: Parses a given XML file to return a list of metabolite tokens."""
-import xml.etree.ElementTree as ET
+import defusedxml.ElementTree as ET
 
 
 def parse_tokens(xml_path: str):
